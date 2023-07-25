@@ -1,0 +1,198 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: -2rem;
+  width: 150%;
+  height: 100%;
+  backdrop-filter: brightness(0.8) blur(10px);
+  z-index: 5;
+}
+
+.float {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 50%;
+  min-height: 70%;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  z-index: 101;
+  padding: 20px;
+  background-color: var(--background);
+  border-radius: var(--border-radius);
+}
+
+.purchaseFloat {
+  position: absolute;
+  z-index: 10;
+  min-width: 50%;
+  min-height: 70%;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  background-color: var(--background);
+  border-radius: var(--border-radius);
+}
+
+.purchase {
+  margin: 0;
+  color: var(--text-color);
+  font-size: 1.2rem;
+  font-family: var(--font);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    margin-bottom: 0;
+    margin-top: 10px;
+  }
+
+  @media (max-width: 860px) {
+    min-width: 100%;
+  }
+}
+
+.options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 0.8rem;
+  align-items: center;
+  padding: 0.4rem;
+  width: 100%;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 140px;
+    background-color: var(--background-accent);
+    border-radius: var(--border-radius);
+    transition: all 300ms ease-in-out;
+
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--text-color-accent);
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--text-color-accent);
+      margin: 0 0 5px;
+    }
+    h2 {
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: var(--text-color-accent);
+      margin: 0 0 5px;
+    }
+
+    p {
+      font-size: 0.85rem;
+      font-weight: 300;
+      margin: 2px 0;
+    }
+
+    .applies {
+      color: var(--red);
+    }
+
+    .saving {
+      color: var(--primary);
+    }
+
+    span {
+      font-size: 0.95rem;
+      font-weight: 500;
+      margin: 0;
+    }
+
+    .WD {
+      color: var(--secondary);
+    }
+
+    .EA {
+      color: var(--tertiary);
+      margin-bottom: 3px;
+    }
+
+    button {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      min-height: 50px;
+      min-width: 100px;
+      border-radius: var(--border-radius);
+      background: var(--primary);
+      border: none;
+      margin-bottom: 10px;
+      color: var(--text-color);
+      font-size: 1.6rem;
+      font-weight: 500;
+      font-family: var(--font);
+      cursor: pointer;
+      transition: filter 300ms ease-in-out;
+
+      &:hover {
+        filter: brightness(1.2);
+      }
+
+      svg {
+        fill: var(--text-color);
+        aspect-ratio: 1/1;
+        width: 30px !important;
+        margin: 0 10px 0 0 !important;
+      }
+
+      span {
+        color: var(--text-color);
+        font-size: 1.6rem;
+        font-weight: 500;
+      }
+    }
+
+    &:hover {
+      transform: scale(1.01);
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+    }
+
+    .doop {
+      padding-left: 10px;
+      padding-right: 10px;
+
+      span {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+      }
+      p {
+        font-size: 1rem;
+        font-weight: 500;
+        margin: 0 0 0 10px;
+      }
+    }
+  }
+  .max {
+    grid-column: span 2;
+
+    box-shadow: 0 0 5px 2px var(--primary);
+    background-image: linear-gradient(
+                    rgba(20,20,20,1) 0%,
+                    rgba(18,18,18,0.98) 35%,
+                    rgba(18,18,18,0.98) 65%,
+                    rgba(20,20,20,1) 99%),
+    url('../../assets/casa.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    &:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 15px 2px var(--primary);
+    }
+  }
+}

@@ -1,0 +1,93 @@
+@import '../../variables.scss';
+
+.listingCard {
+    --scale: 400px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    width: var(--scale);
+    background: var(--background-accent);
+    border-radius: var(--border-radius);
+    color: var(--primary);
+    font-family: var(--font);
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+
+    &:hover {
+        transform: scale(1.02);
+    }
+
+    .statusTop {
+        position: relative;
+        height: 0;
+        width: 50px;
+
+        .raffleId {
+            display: flex;
+            align-items: center;
+            align-self: flex-start;
+            justify-content: center;
+            color: var(--text-color);
+            font-family: var(--font);
+            font-size: 1rem;
+            font-weight: 300;
+            background: var(--background-accent);
+            border-radius: var(--border-radius);
+            height: 25px;
+            margin-top: 7px;
+            margin-left: 7px;
+            padding: 0 10px;
+            width: fit-content;
+        }
+    }
+
+    .status {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+        border-radius: var(--border-radius) var(--border-radius) 0 0;
+        height: var(--scale);
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+
+        .price {
+            display: flex;
+            align-items: center;
+            color: var(--primary);
+            font-family: var(--font);
+            font-size: 1.2rem;
+            font-weight: 400;
+            background: var(--background-accent);
+            border-radius: var(--border-radius);
+            height: 30px;
+            padding: 0 0.5rem;
+            margin-bottom: 7px;
+            margin-right: 7px;
+            margin-left: auto;
+
+            svg {
+                fill: var(--primary);
+                aspect-ratio: 1/1;
+                width: 20px;
+                margin-right: 4px;
+            }
+        }
+    }
+
+    .cardBody {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 10px 0;
+    }
+}

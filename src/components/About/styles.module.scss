@@ -1,0 +1,182 @@
+@import '../../variables.scss';
+
+
+@keyframes moveText {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 25%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+
+@keyframes randomFill {
+  0% {
+    fill: #FBE76E;
+  }
+
+  25% {
+    fill: $pColor;
+  }
+
+  50% {
+    fill: $sColor;
+  }
+
+  75% {
+    fill: #D5FD8E;
+  }
+
+  100% {
+    fill: #FBE76E;
+  }
+}
+
+.aboutContainer {
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100%;
+  width: 100%;
+  padding: 150px 100px;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.whoopDoop {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  height: 100%;
+  width: 100%;
+
+  img {
+    border-radius: 15px;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  }
+}
+
+.aboutText {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  h1 {
+    font-size: 2.5em;
+    background-size: 200% auto;
+    background-image: repeating-linear-gradient(to right, $pColor, $sColor, #D5FD8E, #FBE76E);
+    background-clip: text;
+    color: transparent;
+    animation: moveText 4s infinite;
+  }
+
+
+  p {
+    font-size: 20px;
+    color: #FFF;
+  }
+}
+
+.socialsContainer {
+  width: 100%;
+  display: flex;
+  margin: 20px 0;
+  justify-content: space-between;
+}
+
+.socialIcon {
+
+  svg {
+    fill: #FFF;
+    height: 40px;
+    width: 40px;
+    filter: drop-shadow(2px 2px 4px #000000);
+  }
+
+
+  &:hover svg {
+    animation: randomFill 4s infinite;
+  }
+
+}
+
+
+@media only screen and (max-width: 1200px) {
+  .aboutContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 100%;
+    padding: 40px 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .whoopDoop {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+
+    img {
+      border-radius: 15px;
+      width: 100%;
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    }
+  }
+
+  .aboutText {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: justify;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+      font-size: 1.5em;
+      background-size: 200% auto;
+      background-image: repeating-linear-gradient(to right, $pColor, $sColor, #D5FD8E, #FBE76E);
+      background-clip: text;
+      color: transparent;
+      animation: moveText 4s infinite;
+      margin: 20px 0 0 0;
+    }
+
+
+    p {
+      font-size: 16px;
+      color: #FFF;
+    }
+  }
+
+  .socialsContainer {
+    width: 90%;
+    display: flex;
+    margin: 20px 0;
+    justify-content: space-between;
+  }
+
+  .socialIcon {
+
+    svg {
+      fill: #FFF;
+      height: 40px;
+      width: 40px;
+      filter: drop-shadow(2px 2px 4px #000000);
+      animation: randomFill 4s infinite;
+    }
+
+
+  }
+
+}

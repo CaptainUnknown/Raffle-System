@@ -1,0 +1,300 @@
+@import '../../variables.scss';
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(1deg);
+  }
+
+  50% {
+    transform: rotate(-1deg);
+  }
+
+  100% {
+    transform: rotate(1deg);
+  }
+}
+
+.titleContainer {
+  padding: 100px 0 50px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $bg2;
+
+  h2 {
+    margin: 0;
+    font-size: 5em;
+    color: #fff;
+    // text-shadow: 2px 2px #000000;
+  }
+}
+
+.galleryContainer {
+  justify-items: center;
+  padding: 0 100px 10px 100px;
+  background-color: $bg2;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.nftCard {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  transition: filter 300ms ease-in-out;
+
+  &:hover {
+    filter: brightness(1.2);
+    // add box shadow
+    // box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    //animation: wiggle 2s infinite;
+  }
+}
+
+.nftId {
+  color: #fff;
+  font-weight: 600;
+  font-size: 24px;
+  // text-shadow: 2px 2px #000000;
+}
+
+.searchContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background-color: $bg2;
+  padding-bottom: 150px;
+
+  h2 {
+    margin: 5px 0;
+    font-size: 2em;
+    color: #fff;
+    // text-shadow: 2px 2px #000000;
+  }
+
+
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  height: 100%;
+  width: 30%;
+
+  // for screens of 860px & below
+  @media (max-width: 860px) {
+    width: 80%;
+  }
+
+
+  input {
+    font-family: var(--font);
+    border-radius: var(--border-radius);
+    background: var(--background);
+    //border: none;
+    outline: none;
+    width: 100%;
+    height: 70px;
+    padding: 10px;
+    font-size: 20px;
+    color: var(--text-color);
+    //box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    border: var(--text-color) 2px solid;
+  }
+
+  button {
+    font-family: var(--font);
+    padding: 10px;
+    font-size: 20px;
+    border-radius: var(--border-radius);
+    border: none;
+    color: #fff;
+    height: 70px;
+    background: var(--primary);
+    cursor: pointer;
+    //box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    transition: all 200ms ease-in-out;
+
+    &:hover {
+      //box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+      //animation: wiggle 2s infinite;
+      //color: rgb(223, 222, 222);
+      filter: brightness(1.2);
+      transition: all .2s ease-in-out;
+    }
+  }
+}
+
+@media only screen and (min-width:768px) and (max-width:1200px) {
+  .galleryContainer {
+    justify-items: center;
+    background-color: $bg2;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0;
+  }
+
+  .searchContainer {
+    padding: 40px 10px 10px 10px;
+  }
+
+  .titleContainer {
+    padding: 10px;
+  }
+
+  .search {
+    display: grid;
+    grid-template-columns: 1fr .5fr;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height: 70px;
+    width: 80%;
+    min-width: 300px;
+
+    input {
+      font-family: var(--font);
+      border-radius: var(--border-radius);
+      border: none;
+      outline: none;
+      width: 100%;
+      height: 70px;
+      padding: 10px;
+      font-size: 20px;
+      color: var(--text-color);
+      background: var(--background);
+      //box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    }
+
+    button {
+      font-family: var(--font);
+      background-color: var(--background);
+      padding: 10px;
+      font-size: 20px;
+      border-radius: var(--border-radius);
+      border: none;
+      color: var(--text-color);
+      cursor: pointer;
+      //box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+      transition: all 200ms ease-in-out;
+
+      &:hover {
+        // box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+        // animation: wiggle 2s infinite;
+        // color: rgb(223, 222, 222);
+        filter: brightness(1.2);
+        transition: all .2s ease-in-out;
+      }
+    }
+  }
+
+}
+
+
+@media only screen and (max-width: 767px) {
+  .titleContainer {
+    padding: 0 0 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $bg2;
+
+    h2 {
+      margin: 0;
+      font-size: 2em;
+      color: #fff;
+      // text-shadow: 2px 2px #000000;
+    }
+  }
+
+  .galleryContainer {
+    justify-items: center;
+    background-color: $bg2;
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+
+  .nftCard {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    // animation: wiggle 2s infinite;
+  }
+
+  .nftId {
+    color: #fff;
+    font-weight: 600;
+    font-size: 24px;
+    // text-shadow: 2px 2px #000000;
+  }
+
+  .searchContainer {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: $bg2;
+    padding: 20px 0 50px 0;
+
+    h2 {
+      margin: 5px 0;
+      font-size: 2em;
+      color: #fff;
+      // text-shadow: 2px 2px #000000;
+    }
+
+
+  }
+
+  .search {
+    width: 60%;
+
+
+    input {
+      font-family: var(--font);
+      border-radius: var(--border-radius);
+      border: none;
+      width: 100%;
+      height: 80px;
+      padding: 10px;
+      font-size: 20px;
+      outline: none;
+
+      color: var(--text-color);
+      background: var(--background);
+      //box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    }
+
+    button {
+      font-family: $pFont;
+      background-color: var(--text-color);
+      padding: 10px;
+      font-size: 20px;
+      border-radius: 10px;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+      //box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+      transition: all .2s ease-in-out;
+
+      &:hover {
+        filter: brightness(1.2);
+        //box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+        //animation: wiggle 2s infinite;
+        //color: rgb(223, 222, 222);
+        transition: all .2s ease-in-out;
+      }
+    }
+  }
+}

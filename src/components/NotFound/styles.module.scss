@@ -1,0 +1,214 @@
+@import '../../variables.scss';
+
+@keyframes moveBorder {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 25%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.notFoundContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  padding-top: 250px;
+
+  h2 {
+    color: #FFF;
+    text-shadow: 2px 2px #000000;
+    margin-bottom: 50px;
+  }
+}
+
+.fanArtContainer {
+  position: relative;
+  height: auto;
+  width: 40%;
+  text-align: center;
+
+  img {
+    border-radius: 10px;
+    width: 100%;
+    border: 4px transparent solid;
+    background-size: 200% auto;
+    background-image: repeating-linear-gradient(to right, $pColor, $sColor, #D5FD8E, #FBE76E);
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    animation: moveBorder 4s infinite;
+  }
+
+  p {
+    font-size: 1.5em;
+    color: #FFF;
+    text-shadow: 2px 2px #000000;
+  }
+}
+
+.rightButton {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border: 2px solid #FFF;
+  border-radius: 100%;
+  background-color: $bg2;
+  top: 45%;
+  transform: translate(0, -50%);
+  right: -4%;
+  transition: all 0.4s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  z-index: 40;
+  cursor: pointer;
+
+  svg {
+    fill: #FFF;
+    height: 25px;
+    width: 25px;
+  }
+
+  &:hover {
+    background-color: $bg1;
+    transition: all 0.4s ease-in-out;
+  }
+}
+
+.leftButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border: 2px solid #FFF;
+  border-radius: 100%;
+  background-color: $bg2;
+  position: absolute;
+  top: 45%;
+  transform: translate(0, -50%);
+  left: -4%;
+  transition: all 0.4s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  cursor: pointer;
+
+  svg {
+    fill: #FFF;
+    height: 25px;
+    width: 25px;
+  }
+
+  &:hover {
+    background-color: $bg1;
+    transition: all 0.4s ease-in-out;
+
+  }
+}
+
+
+@media only screen and (max-width: 767px) {
+  .notFoundContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding: 400px 10px;
+    text-align: center;
+
+    h2 {
+      color: #FFF;
+      text-shadow: 2px 2px #000000;
+      margin-bottom: 50px;
+    }
+  }
+
+  .fanArtContainer {
+    position: relative;
+    height: auto;
+    width: 90%;
+    text-align: center;
+
+    img {
+      border-radius: 10px;
+      width: 100%;
+      border: 4px transparent solid;
+      background-size: 200% auto;
+      background-image: repeating-linear-gradient(to right, $pColor, $sColor, #D5FD8E, #FBE76E);
+      box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+      animation: moveBorder 4s infinite;
+    }
+
+    p {
+      font-size: 1.5em;
+      color: #FFF;
+      text-shadow: 2px 2px #000000;
+    }
+  }
+
+  .rightButton {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border: 2px solid #FFF;
+    border-radius: 100%;
+    background-color: $bg2;
+    top: 40%;
+    transform: translate(0, -50%);
+    right: -6%;
+    transition: all 0.4s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    z-index: 40;
+    cursor: pointer;
+
+    svg {
+      fill: #FFF;
+      height: 15px;
+      width: 15px;
+    }
+
+    &:hover {
+      background-color: $bg1;
+      transition: all 0.4s ease-in-out;
+    }
+  }
+
+  .leftButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border: 2px solid #FFF;
+    border-radius: 100%;
+    background-color: $bg2;
+    position: absolute;
+    top: 40%;
+    transform: translate(0, -50%);
+    left: -6%;
+    transition: all 0.4s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    cursor: pointer;
+
+    svg {
+      fill: #FFF;
+      height: 15px;
+      width: 15px;
+    }
+
+    &:hover {
+      background-color: $bg1;
+      transition: all 0.4s ease-in-out;
+
+    }
+  }
+
+}
