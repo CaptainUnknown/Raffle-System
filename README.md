@@ -1,10 +1,8 @@
 <img src="https://i.imgur.com/2cfS300.png" alt="Raffle Cards" style="width:600px;"/>
 
-# Whoodoop Labs Raffle Site 🎟️
+# A Cross Chain Raffle System 🎟️
 
-This repository contains the source code for an ERC721 raffle system website built using ReactJS. The system allows users to participate in raffles using either ERC20 Tokens or Eth.
-
-Whoopsie Doopsies is a collection with a total volume of over 800 ETH. As part of their 2023 Roadmap, they planned to develop a Raffle System similar to the one that Metawin.com has been dominating with, in the space for years. My task was to develop a system that automates the management of raffles while minimizing network costs and providing the same level of utility as the competitor.
+This repository contains the source code for an ERC721 raffle system website built using ReactJS. The system allows users to participate in raffles using either ERC20 Tokens or Eth. This site & all the supported systems facilitated over 100k ticket purchases.
 
 Metawin.com utilizes on-chain random number generation through ChainLink Upkeep, which incurs significant network fees and increases operational costs per raffle. However, the Smart Contract for this site actually uses an off-chain random number provided upon invocation.
 
