@@ -1,0 +1,265 @@
+.welcomeActions {
+    text-align: center;
+    color: #FFFFFF;
+    div {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: center !important;
+        align-items: center !important;
+        margin-bottom: 1rem !important;
+    }
+    button[type="button"] {
+        height: 50px !important;
+        background: var(--primary) !important;
+        font-family: var(--font) !important;
+        font-weight: 600 !important;
+    }
+}
+
+
+
+.raffleLoginContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    //background: linear-gradient(180deg, #010007 -16.33%, rgba(0, 11, 64, 0.93) 24.67%, #02FEFF 100%);
+    background: var(--background);
+
+    button {
+        background: var(--primary);
+        background-size: 200%;
+        border: none;
+        border-radius: var(--border-radius);
+        color: var(--text-color);
+        cursor: pointer;
+        font-family: var(--font);
+        font-size: 1rem;
+        font-weight: 500;
+        margin: 0.4rem 0;
+        padding: 0.3rem 1.2rem;
+        height: 50px;
+        transition: all 200ms ease-in-out;
+
+        &:hover {
+            filter: brightness(1);
+        }
+    }
+
+    svg {
+        fill: rgb(42, 42, 42);
+        aspect-ratio: 1/1;
+        width: 50px;
+        align-self: flex-end;
+        margin-bottom: 20px;
+        margin-right: 20px;
+        cursor: pointer;
+        transition: fill 300ms ease-in-out;
+
+        &:hover {
+            fill: var(--primary);
+        }
+    }
+
+    h1 {
+        font-family: var(--font);
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: var(--text-color);
+        margin: 0;
+        margin-bottom: 0.5rem;
+    }
+
+    h3 {
+        font-family: var(--font);
+        font-size: 1.5rem;
+        font-weight: 400;
+        color: var(--text-color-accent);
+        margin: 0;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        font-family: var(--font);
+        font-size: 1.2rem;
+        font-weight: 400;
+        color: var(--text-color);
+        margin: 0;
+        margin-bottom: 1rem;
+        text-align: justify;
+    }
+}
+
+.moon {
+    position: absolute;
+    height: 50%;
+    top: -25%;
+    right: -12%;
+}
+
+.welcomeContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+    //background: var(--background-accent);
+    background-image: linear-gradient(rgba(20, 20, 20, 1) 0%,
+            rgba(18, 18, 18, 0.98) 35%,
+            rgba(18, 18, 18, 0.98) 65%,
+            rgba(20, 20, 20, 1) 99%),
+        url('../../assets/lanu.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.4);
+}
+
+.infoContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    height: 75%;
+    width: 80%;
+    padding: 120px;
+
+}
+
+.infoActions {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-accent);
+    border-radius: 20px;
+    padding: 40px;
+    width: 100%;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.4);
+
+    button {
+        align-self: center;
+    }
+}
+
+.primaryButton {
+    color: #000000;
+    font-size: larger;
+    font-weight: 700;
+    background-image: url('/assets/staking/primaryButton.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin: 0 auto;
+    cursor: pointer;
+    padding: 10px 40px;
+    width: max-content;
+    border-radius: 25px;
+    transition: all .4s ease-in-out;
+
+    &:hover {
+        opacity: .85;
+        transition: all .4s ease-in-out;
+    }
+}
+
+.button {
+    color: #000000;
+    font-size: larger;
+    font-weight: 700;
+    background-image: url('/assets/staking/primaryButton.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin: 0 auto;
+    cursor: pointer;
+    padding: 15px 50px;
+    width: max-content;
+    border-radius: 25px;
+    transition: all .4s ease-in-out;
+
+    &:hover {
+        opacity: .85;
+        transition: all .4s ease-in-out;
+    }
+}
+
+.infoButton {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.stoneTablet {
+    height: 100%;
+    width: 100%;
+}
+
+
+@media screen and (max-width: 767px) {
+    .moon {
+        height: 30%;
+        top: -60px;
+        right: -15%;
+    }
+
+    .welcomeContainer {
+        height: 100%;
+        width: 100%;
+    }
+
+    .welcomeActions {
+        margin-top: 50px;
+
+        h1 {
+            font-size: larger;
+        }
+
+        h3 {
+            font-size: x-small;
+        }
+    }
+
+    .primaryButton {
+        padding: 10px 15px;
+        font-size: small;
+    }
+
+    .infoButton {
+        height: 50px;
+        width: 50px;
+    }
+
+    .infoContainer {
+        width: 100%;
+        height: 35vh;
+        padding: 25px;
+        justify-content: flex-start;
+    }
+
+    .infoActions {
+        height: 100%;
+        overflow: scroll;
+    }
+
+    .infoActionsInner {
+        padding: 10px;
+
+        &:first-child p {
+            margin-top: 0;
+        }
+    }
+
+    .button {
+        padding: 10px 15px;
+        font-size: small;
+    }
+
+}

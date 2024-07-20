@@ -1,0 +1,74 @@
+.ownerContainer {
+    background-color: #333551;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    h1 {
+        color: #ffffff;
+        text-shadow: 2px 2px 2px #000000;
+        margin: 50px 0 0 0;
+    }
+}
+
+.poolModal {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    background-color: #00000080;
+    padding: 50px;
+    border-radius: 15px;
+
+    p {
+        color: white;
+        font-size: 20px;
+    }
+}
+
+.warning {
+    background-color: rgb(255, 161, 20);
+    color: #ffffff;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+.amountInput {
+    background-color: rgba(53, 52, 52, 0.281);
+    border: none;
+    border-radius: 15px;
+    padding: 20px;
+    font-size: large;
+    color: white;
+    width: 100%;
+}
+
+.poolButton {
+    margin-top: 20px;
+    background-color: #00000080;
+    border: none;
+    border-radius: 15px;
+    padding: 10px;
+    color: white;
+    width: 100%;
+    cursor: pointer;
+    font-size: large;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+        background-color: #13121267;
+        transition: all 0.2s ease-in-out;
+    }
+
+    &:disabled {
+        opacity: .5;
+        cursor: not-allowed;
+    }
+
+    &:disabled:hover {
+        background-color: #00000080;
+    }
+}

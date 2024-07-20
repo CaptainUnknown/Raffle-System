@@ -1,0 +1,588 @@
+@import "../../variables.scss";
+@keyframes moveGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.stakingContainer {
+  background-color: --bg1;
+  width: 100%;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.battleProgressContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.battleProgress {
+  position: relative;
+  width: 350px;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 2;
+  }
+
+  p {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 3;
+    color: #fff;
+    text-shadow: 1px 1px 2px #000;
+  }
+
+  h3 {
+    position: absolute;
+    top: -55px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 3;
+    color: #fff;
+    width: max-content;
+    text-shadow: 1px 1px 2px #000;
+  }
+}
+
+.factionProgress {
+  position: relative;
+  width: 276px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  & img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 2;
+  }
+
+  & p {
+    position: absolute;
+    top: 17px;
+    left: 50%;
+    z-index: 3;
+    color: #fff;
+    text-shadow: 2px 2px 2px #000;
+  }
+
+  .factionTitle {
+    position: absolute;
+    top: -22px;
+    left: 35%;
+    z-index: 3;
+    color: #fff;
+    width: max-content;
+    text-shadow: 2px 2px 2px #000;
+  }
+
+  .factionStats {
+    position: absolute;
+    top: -22px;
+    left: 70%;
+    z-index: 3;
+    color: #fff;
+    width: max-content;
+    text-shadow: 2px 2px 2px #000;
+  }
+}
+
+.battleProgressBar {
+  clip-path: polygon(0 0, 90% 0, 100% 100%, 0 100%);
+  position: relative;
+  height: 40px;
+  background: linear-gradient(
+    90deg,
+    #02feff,
+    #00f4fa,
+    #03e9f5,
+    #10dfef,
+    #1cd5e9,
+    #1dcce2,
+    #1fc3da,
+    #21bad2,
+    #1ab0c8,
+    #13a6be,
+    #0a9db4,
+    #0093aa
+  );
+  background-size: 200% 200%;
+  margin-left: 15px;
+  animation: moveGradient 4s ease-in-out infinite;
+}
+
+.factionProgressContainer {
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 200px;
+  row-gap: 50px;
+}
+
+.keltaProgressBar {
+  clip-path: polygon(0 0, 90% 0, 100% 100%, 0 100%);
+  position: relative;
+  height: 40px;
+  background: linear-gradient(
+    90deg,
+    #fff99d,
+    #fef798,
+    #fcf594,
+    #fbf38f,
+    #faf18a,
+    #f5ec84,
+    #f1e87f,
+    #ece379,
+    #e3da71,
+    #dbd269,
+    #d2c962,
+    #cac15a
+  );
+  background-size: 200% 200%;
+  margin-left: 15px;
+  animation: moveGradient 4s ease-in-out infinite;
+}
+
+.casaProgressBar {
+  clip-path: polygon(0 0, 90% 0, 100% 100%, 0 100%);
+  position: relative;
+  height: 40px;
+  background: linear-gradient(
+    90deg,
+    #d4fca6,
+    #cefa9d,
+    #c8f993,
+    #c2f78a,
+    #bcf580,
+    #b6f179,
+    #afec72,
+    #a9e86b,
+    #a2e065,
+    #9bd85e,
+    #94d158,
+    #8dc952
+  );
+  background-size: 200% 200%;
+  margin-left: 15px;
+  animation: moveGradient 4s ease-in-out infinite;
+}
+
+.manuProgressBar {
+  clip-path: polygon(0 0, 90% 0, 100% 100%, 0 100%);
+  position: relative;
+  height: 40px;
+  background: linear-gradient(
+    90deg,
+    #f8acd2,
+    #f9a6cf,
+    #fba1cc,
+    #fc9bc9,
+    #fd95c6,
+    #fb90c2,
+    #f88bbe,
+    #f686ba,
+    #f080b4,
+    #e97bae,
+    #e375a9,
+    #dd70a3
+  );
+  background-size: 200% 200%;
+  margin-left: 15px;
+  animation: moveGradient 4s ease-in-out infinite;
+}
+
+.lanuProgressBar {
+  clip-path: polygon(0 0, 90% 0, 100% 100%, 0 100%);
+  position: relative;
+  height: 40px;
+  background: linear-gradient(
+    90deg,
+    #02feff,
+    #00f4fa,
+    #03e9f5,
+    #10dfef,
+    #1cd5e9,
+    #1dcce2,
+    #1fc3da,
+    #21bad2,
+    #1ab0c8,
+    #13a6be,
+    #0a9db4,
+    #0093aa
+  );
+  background-size: 200% 200%;
+  margin-left: 15px;
+  animation: moveGradient 4s ease-in-out infinite;
+}
+
+.poolEndedContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background: var(--bg1);
+}
+
+.victoryContainer {
+  position: relative;
+  height: 650px;
+  margin: auto 0;
+
+  h1 {
+    position: absolute;
+    top: 332px;
+    left: 260px;
+    color: #fff;
+    text-shadow: 2px 2px 2px #000;
+    margin: 18px 0 0 10px;
+  }
+
+  .rewardContainer {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 442px;
+    left: 54%;
+    transform: translate(-54%, 0);
+    color: #fff;
+    text-shadow: 2px 2px 2px #000;
+
+    h3 {
+      margin: 20px 0 0 0;
+    }
+
+    .claim {
+      height: 50px;
+      padding-left: 15px;
+      padding-right: 15px;
+      border-radius: var(--border-radius);
+      background-color: var(--primary);
+      color: var(--text-color);
+      font-size: 1.2rem;
+      font-weight: 500;
+      font-family: var(--font);
+      outline: none;
+      align-self: center;
+      border: none;
+      -webkit-appearance: none;
+      cursor: pointer;
+      transition: all 200ms ease-in-out;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 10px;
+
+      &:hover {
+        opacity: 0.85;
+        transition: all 0.4s ease-in-out;
+      }
+
+      &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+    }
+
+    .loading {
+      height: 45px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+.defeatContainer {
+  position: relative;
+  height: 740px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto 0;
+
+  h1 {
+    position: absolute;
+    top: 270px;
+    left: 280px;
+    color: #fff;
+    text-shadow: 2px 2px 2px #000;
+    margin: 18px 0 0 10px;
+  }
+
+  .rewardContainer {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 390px;
+    left: 52%;
+    transform: translate(-52%, 0);
+    color: #fff;
+    text-shadow: 2px 2px 2px #000;
+
+    h3 {
+      margin: 20px 0 10px 0;
+    }
+
+    .claim {
+      height: 50px;
+      padding-left: 15px;
+      padding-right: 15px;
+      border-radius: var(--border-radius);
+      background-color: var(--primary);
+      color: var(--text-color);
+      font-size: 1.2rem;
+      font-weight: 500;
+      font-family: var(--font);
+      outline: none;
+      align-self: center;
+      border: none;
+      -webkit-appearance: none;
+      cursor: pointer;
+      transition: all 200ms ease-in-out;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 10px;
+
+      &:hover {
+        opacity: 0.85;
+        transition: all 0.4s ease-in-out;
+      }
+
+      &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+    }
+
+    .loading {
+      height: 45px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+.moon {
+  position: absolute;
+  height: 50%;
+  top: -25%;
+  right: -12%;
+}
+
+.winning {
+  height: 100%;
+}
+
+.losing {
+  height: 550px;
+}
+
+.stars {
+  position: absolute;
+  height: 120px;
+  width: auto;
+  top: 60px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 1;
+}
+
+.check {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    margin: 0 0 5px 0;
+  }
+}
+
+.checkMobile {
+  display: none;
+}
+
+.videoContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 550px;
+  width: 750px;
+  margin: 50px 0;
+
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+  }
+
+  video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    height: 545px;
+    width: 745px;
+    object-fit: cover;
+    border-radius: 25px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .stakingContainer {
+    padding-top: 80px;
+  }
+
+  .moon {
+    height: 30%;
+    top: -15%;
+    right: -12%;
+  }
+
+  .victoryContainer {
+    height: 60%;
+
+    h1 {
+      top: 54%;
+      left: 40%;
+      font-size: larger;
+      margin: 0;
+    }
+
+    .rewardContainer {
+      top: 66%;
+
+      h3 {
+        font-size: small;
+        margin: 15px auto 0 auto;
+      }
+
+      .claim {
+        font-size: small;
+      }
+    }
+
+    .checkMobile {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      p {
+        margin: 0 0 2px 0;
+        font-size: small;
+      }
+    }
+
+    .check {
+      display: none;
+    }
+  }
+
+  .defeatContainer {
+    h1 {
+      top: 308px;
+      left: 142px;
+      font-size: larger;
+      width: 100%;
+    }
+
+    .rewardContainer {
+      top: 375px;
+
+      h3 {
+        font-size: small;
+        margin: 15px auto 0 auto;
+      }
+
+      .claim {
+        font-size: small;
+      }
+    }
+  }
+
+  .losing {
+    height: 40%;
+  }
+
+  .stars {
+    height: 80px;
+    top: 30px;
+  }
+
+  .battleProgressContainer {
+    flex-direction: column;
+  }
+
+  .battleProgress {
+    margin-top: 40px;
+  }
+
+  .factionProgressContainer {
+    grid-template-columns: 1fr;
+    place-items: center;
+    margin-top: 60px;
+  }
+
+  .videoContainer {
+    height: 250px;
+    width: 350px;
+    margin: 50px 0;
+
+    video {
+      height: 245px;
+      width: 345px;
+    }
+  }
+}

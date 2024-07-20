@@ -1,0 +1,79 @@
+.MVPEditorWrap {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+}
+
+.MVPEditor {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  margin-top: 4rem;
+  padding: 2rem;
+  width: 50%;
+
+  h1 {
+    color: var(--text-color);
+    font-family: var(--font);
+    font-size: 2rem;
+    margin: 0;
+  }
+
+  input {
+    color: var(--text-color);
+    font-family: var(--font);
+    font-size: 1rem;
+    height: 40px;
+    background: var(--background-accent);
+    border: 2px solid var(--text-color-accent);
+    border-radius: var(--border-radius);
+    padding-left: 20px;
+    margin-top: 20px;
+
+    &:focus {
+      outline: none;
+      border: 2px solid var(--primary);
+    }
+  }
+
+  textarea {
+    color: var(--text-color);
+    font-family: var(--font);
+    font-size: 1rem;
+    background: var(--background-accent);
+    border: 2px solid var(--text-color-accent);
+    border-radius: var(--border-radius);
+    padding-left: 20px;
+    margin-top: 20px;
+    height: 346px;
+    padding-top: 10px;
+    resize: vertical;
+
+    &:focus {
+      outline: none;
+      border: 2px solid var(--primary);
+    }
+  }
+
+  button {
+    color: var(--text-color);
+    font-family: var(--font);
+    font-size: 1rem;
+    height: 40px;
+    background: var(--primary);
+    border: none;
+    border-radius: var(--border-radius);
+    margin-top: 40px;
+    cursor: pointer;
+    transition: filter 200ms ease-in-out;
+
+    &:hover {
+      filter: brightness(1.2);
+    }
+  }
+
+  @media screen and (max-width: 860px) {
+    width: 100%;
+  }
+}

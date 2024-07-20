@@ -1,0 +1,234 @@
+.loginWrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 50%;
+  width: 50%;
+  margin-top: 6rem;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media screen and (max-width: 760px) {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.loadingWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 2rem;
+
+  svg {
+    aspect-ratio: 1/1;
+    width: 75px;
+  }
+
+  h1 {
+    color: var(--text-color);
+    margin-top: 0.5rem;
+    font-size: 1.4rem;
+  }
+}
+
+.bridgeWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background: black;
+
+  .bridgeWidget {
+    display: flex;
+    flex-direction: column;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 1rem;
+    min-height: 500px;
+    max-width: 700px;
+    width: 90%;
+    border-radius: var(--border-radius);
+    align-items: start;
+    justify-content: center;
+    background: var(--background);
+
+    @media (max-width: 860px) {
+      min-width: 100%;
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
+
+    h2,p {
+      color: var(--text-color-accent);
+    }
+
+    h1 {
+      color: var(--primary);
+      margin: 0;
+    }
+
+    .tag {
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+
+    .address {
+      color: var(--text-color);
+      height: 25px;
+      background: var(--primary);
+      width: 160px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: var(--border-radius);
+      margin-top: 10px;
+      /* margin-right: 10px; */
+      justify-self: flex-end;
+      /* align-self: flex-end; */
+      margin-left: auto;
+    }
+
+    .iconWrapper {
+      display: flex;
+      flex-direction: row;
+      background: #404040;
+      border-radius: 100%;
+      align-items: center;
+      justify-content: center;
+      width: 60px;
+      height: 60px;
+      padding: 0;
+      aspect-ratio: 1/1;
+    }
+
+    .ethBalances {
+      display: flex;
+      flex-direction: row;
+      background: var(--background-accent);
+      border-radius: var(--border-radius);
+      padding: 1rem;
+      margin-bottom: 1rem;
+      width: 100%;
+      cursor: pointer;
+      transition: filter 200ms ease-in-out;
+
+      p {
+        margin: 0;
+        margin-top: 10px;
+      }
+
+      span {
+        color: var(--primary);
+        font-size: 1.2rem;
+        font-weight: 600;
+      }
+
+      .left {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        padding-left: 1rem;
+        align-items: flex-start;
+        justify-content: center;
+        border-right: 2px solid #404040;
+
+        .swapWrapper {
+          width: 200%;
+          align-items: center;
+          display: flex;
+          justify-content: center;
+          height: 0px;
+
+          .swapBack {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 100%;
+            background: #404040;
+            padding: 5px;
+            position: relative;
+            top: -10px; // TODO: Adjust
+
+            svg {
+              fill: var(--text-color-accent);
+              width: 30px;
+              height: 30px;
+              aspect-ratio: 1/1;
+            }
+          }
+        }
+      }
+
+      .right {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        padding-left: 1rem;
+        align-items: flex-end;
+        justify-content: center;
+      }
+
+      svg {
+        height: 45px;
+        width: 45px;
+        aspect-ratio: 1/1;
+        margin: 0;
+      }
+
+      &:hover {
+        filter: brightness(1.2);
+      }
+    }
+
+    .doopBalances {
+      display: flex;
+      flex-direction: column;
+      background: var(--background-accent);
+      border-radius: var(--border-radius);
+      padding: 0.5rem 1rem;
+
+      svg {
+        height: 45px;
+        width: 45px;
+        aspect-ratio: 1/1;
+        margin: 0;
+      }
+    }
+
+    .tip {
+      display: flex;
+      flex-direction: column;
+      background: var(--background-accent);
+      border-radius: var(--border-radius);
+      padding: 1rem;
+      margin-top: 1rem;
+
+      h2, p {
+        margin: 0;
+      }
+      p {
+        margin-top: 15px;
+      }
+
+      .icon {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+
+        svg {
+          height: 30px;
+          width: 30px;
+          aspect-ratio: 1/1;
+          fill: var(--text-color-accent);
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}

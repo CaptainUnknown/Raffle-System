@@ -1,0 +1,18 @@
+.warning {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #f5de00;
+  background: #f5de00ba;
+  border-radius: var(--border-radius);
+  margin-bottom: 20px;
+  padding: 10px 20px;
+
+  h2 {
+    text-align: center;
+    color: var(--text-color);
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+}

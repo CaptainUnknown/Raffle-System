@@ -1,0 +1,88 @@
+.chainSwitchContainer {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    max-width: 1200px;
+    width: 100%;
+    padding: 20px;
+    font-family: var(--font);
+
+    & h2 {
+        color: #ffffff;
+        margin-bottom: 5px;
+
+        span {
+            color: #F08627;
+        }
+    }
+
+    p {
+        color: var(--text-color-accent);
+        font-size: 1rem;
+        font-family: var(--font);
+        margin: 0 0 20px;
+    }
+
+    .chainSwitchCTA {
+        display: flex;
+        flex-direction: row;
+        width: 60%;
+        align-items: center;
+        justify-content: space-between;
+
+        @media screen and (max-width: 960px) {
+            width: 100%;
+            justify-content: space-around;
+        }
+
+        .chainSwitchBridgeAssets {
+            text-decoration: none !important;
+            height: 100%;
+            border-radius: var(--border-radius);
+            background-color: #F08627;
+            border: 4px solid #F08627;
+            font-size: 1.2rem;
+            font-family: var(--font);
+            padding: 10px 20px;
+            color: var(--text-color);
+            cursor: pointer;
+            transition: filter 300ms ease-in-out;
+
+            &:hover {
+                filter: brightness(1.2);
+            }
+        }
+
+        .switchChainButton {
+            height: 100%;
+            border-radius: var(--border-radius);
+            background-color: var(--background);
+            border: 4px solid #F08627;
+            font-size: 1.2rem;
+            font-family: var(--font);
+            padding: 10px 20px;
+            color: var(--text-color);
+            cursor: pointer;
+            transition: all 300ms ease-in-out;
+
+            &:hover {
+                background: #F08627;
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .chainSwitchContainer {
+        & h2 {
+            font-size: 1.2rem;
+            text-align: center;
+        }
+    }
+}
