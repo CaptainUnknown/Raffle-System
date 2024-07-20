@@ -1,6 +1,6 @@
-# Example Alchemy Notify Webhooks Server in Node
+# ERC 721 Wrapper/Unwrapper Service
 
-A simple example webhook server for using Alchemy Notify that uses node express.
+A rudimentary bridge leveraging Alchemy webhooks built in NodeJS. On webhook triggers, the signature is verified. Upon success & necessary block confirmations, the asset is wrapped/unwrapped as requested. Gets the job done, and is safe enough implementation for the values of the assets being transferred. Users only interact with unwrapping.
 
 ## Installation
 
@@ -20,18 +20,8 @@ yarn
 
 ## Run
 
-To run on localhost:8080:
+To run
 
 ```
-PORT=8080 HOST=localhost SIGNING_KEY=whsec_your_key_here yarn start
+yarn start
 ```
-
-Please change SIGNING_KEY to the signing key corresponding to your webhook, which you can find [here](https://docs.alchemy.com/alchemy/enhanced-apis/notify-api/using-notify#1.-find-your-signing-key)
-
-And just like that, you're done!
-
-NOTE: Your webhook path is currently set to "/webhook-path" in `src/index.ts`, but feel free to change it to whatever path you'd like.
-
-## Debugging
-
-If you aren't receiving any webhooks, be sure you followed the steps [here first](https://github.com/alchemyplatform/#readme).
