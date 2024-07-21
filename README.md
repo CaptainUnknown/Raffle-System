@@ -2,9 +2,9 @@
 
 # A Cross Chain Raffle System 🎟️
 
-This repository contains the source code for an ERC721 raffle system website built using ReactJS. The system allows users to participate in raffles using either ERC20 Tokens or Eth. This site & all the supported systems facilitated over 100k entry purchases.
+👉 ([Read the case study of this project](https://shehrozk.vercel.app/raffle-case-study))
 
-Metawin.com utilizes on-chain random number generation through ChainLink Upkeep, which incurs significant network fees and increases operational costs per raffle. However, the Smart Contract for this site actually uses an off-chain random number provided upon invocation.
+This repository contains the source code for an ERC721 raffle system website built using ReactJS. The system allows users to participate in raffles using either ERC20 Tokens or Eth. This site & all the supported systems facilitated over 100k entry purchases.
 
 <br/>
 <img src="https://shehrozk.vercel.app/map.svg" style="width: 60%; height: 60%;" alt="Overall system architecture."/>
